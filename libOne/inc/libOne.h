@@ -6,3 +6,7 @@
 #include"MATRIX.h"
 #include"VECTOR2.h"
 #include"let.h"
+#include"package.h"
+#include"sound.h"
+#include"abs.h"
+#include"mathUtil.h"

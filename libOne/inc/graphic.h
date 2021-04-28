@@ -1,6 +1,5 @@
 #pragma once
 #include"common.h"
-#include"mathUtil.h"
 #include"COLOR.h"
 #include"let.h"
 //for users
@@ -30,6 +29,7 @@ void imageColor(float r, float g, float b, float a=255);
 void imageColor(float c);
 void point(float x, float y);
 void line(float sx, float sy, float ex, float ey);
+void arrow(float sx, float sy, float ex, float ey, float size = 30.0f);
 void rect(float x, float y, float w, float h);
 void rect(float x, float y, float w, float h, float angle);
 void circle(float x, float y, float diameter);
@@ -39,7 +39,9 @@ int createShape(struct SHAPE_VERTEX* vertices, int numVertices, long* indices, i
 void shape(int idx, float x, float y, float angle = 0, float size = 1);
 void shape(int idx, const class MATRIX& m);
 int loadImage(const char* filename);
+int loadImageFromRes(const char* resname);
 int cutImage(int idx, int left, int top, int w, int h);
+void divideImage(int img, int cols, int rows, int w, int h, int* imgs);
 void image(int idx, float x, float y, float angle = 0, float size = 1);
 void font(const char* fontname);
 void textSize(float size);
@@ -47,6 +49,12 @@ void text(const char* str, float x, float y);
 void text(double n, float x, float y);
 void text(int n, float x, float y);
 void text(let n, float x, float y);
+void printStart();
+void printSize(float size);
+void printPosX(float x);
+void printPosY(float y);
+void printColor(float r, float g, float b);
+void print(let textInfo);
 //for framework
 void initGraphic(int baseWidth, int baseHeight);
 void freeGraphic();
