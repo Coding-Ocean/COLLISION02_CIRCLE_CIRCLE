@@ -1,3 +1,27 @@
+#if 1 //←ここを0にすると #else より下のサンプルプログラムが実行される
+      //1の時は真下に自分でプログラムをタイプしていくことができる。
+
+#include"libOne.h"
+void gmain() {
+    window(1000, 1000);
+
+    while (notQuit) {
+
+        clear(160);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+#else
+
 #include"libOne.h"
 void gmain() {
     window(1000, 1000);
@@ -44,3 +68,5 @@ void gmain() {
         text("距離=" + (let)distance, 0, 60);
     }
 }
+
+#endif
